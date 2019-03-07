@@ -1,0 +1,170 @@
+<iDOCTYPE html>
+<html>
+<head>
+<title>Registration Page</title>
+<style>
+.align{
+text-align:center;
+background-color:gray;
+height:100%;
+}
+.form{
+margin-right:135px;
+height:auto;
+margin-left:155px;
+background-color:white;
+}
+.container{
+margin-left: 90px;
+margin-top: 30px;
+margin-bottom: 50px;
+}
+</style>
+
+<link href="css/theme-default.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="align" >
+<h2>Registration</h2>
+<div class="form" >
+<div class="container">
+<form name="myform" action="">
+<table>
+      <tr>
+	  <td>First Name</td>
+	  <td><input type="text" data-validation="custom" data-validation-regexp="^([A-Z]+)$"></td>
+	  <td></td>
+	  
+	  <td>Last Name</td>
+	  <td><input type="text" data-validation="custom" data-validation-regexp="^([A-Z]+)$"></td>
+	  <td></td>
+      </tr>
+      <tr>
+	  <td>Date of Birth</td>
+	  <td><input type="date" data-validation="date" min="1956-01-01" max="1988-01-01"  autocomplete="on" value = "date" ></td>
+	  <td><span id="txtspan3"></td>
+	  
+	  <td>Age</td>
+	  <td><input type="text" data-validation="number" data-validation-allowing="range[20;60]" data-validation-error-msg="Invalid"></td>
+	  <td><span id="txtspan9"></td>
+      </tr>
+      <tr>
+	  <td>Gender</td>
+	  <td>
+		  <input type="radio" id="male" name="sex" value="male" data-validation="required" checked data-validation-error-msg="You are Male"> Male
+		  <input type="radio" id="female" name="sex" value="female" data-validation="required" data-validation-error-msg="You are Male"> Female
+	  </td>
+	  <td><span id="txtspan4"></td>
+	  
+	  <td>Status</td>
+	  <td><input type="checkbox" data-validation="required" 
+		 data-validation-error-msg="Are you married">Single</td>
+	   <td><span id="txtspan10"></td>
+      </tr>
+      <tr>
+	  <td>Register No.</td>
+	  <td><input type="text" data-validation="number" data-validation-length="min-10" data-validation-error-msg="Invalid Register number"></td>
+	  <td><span id="txtspan5"></td>
+	  
+	  <td>Designation</td>
+	  <td><input list="Position" name="Position" id="pos" data-validation="required">
+				  <datalist id="Position">
+				  <option value="Junior SE">
+				  <option value="Senior SE">
+				  <option value="Trainee">
+				  <option value="Administrator">
+				  <option value="Data Entry Operator">
+				  <option value="Other">
+				  </datalist>
+	   </td>
+	  <td><span id="txtspan6"></td>
+      </tr>
+      <tr>
+	  <td>Email ID</td>
+	  <td><input type="text" data-validation="email"></td>
+	  <td><span id="txtspan7"></td>
+	  
+	  <td>Department</td>	  
+	  <td><input list="Departments" name="Departments" id="dep" data-validation="required">
+				  <datalist id="Departments">
+				  <option value="Development">
+				  <option value="Design">
+				  <option value="Testing">
+				  <option value="Administration">
+				  <option value="Technical">
+				  <option value="Other">
+				  </datalist>
+	  </td>
+	  <td><span id="txtspan8"></td>
+      </tr>
+      <tr>
+	  <td>Place</td>
+	  <td><input type="text" data-validation="custom" data-validation-regexp="^([a-z]+)$"></td>
+	  <td><span id="txtspanval1"></td>
+	  
+	  <td>State</td>
+	  <td><input type="text" data-validation="custom" data-validation-regexp="^([a-z]+)$"></td>
+	  <td><span id="txtspanval3"></td>
+      </tr>
+      <tr>
+	  <td>Address</td>
+	  <td><textarea data-validation="length" data-validation-length="min20"></textarea></td>
+	  <td><span id="txtspanval2"></td>
+	  
+	 <td>Interests</td>
+	  <td>
+	  <input type="checkbox" id="interest"  name="newsletters[]" value="Gaming" data-validation="checkbox_group" data-validation-qty="min2">Gaming</br>
+	  <input type="checkbox" id="interest"  name="newsletters[]" value="Sports" data-validation="checkbox_group" data-validation-qty="min2">Sports</br>
+	  <input type="checkbox" id="interest"  name="newsletters[]" value="Charity" data-validation="checkbox_group" data-validation-qty="min2">Charity</br>
+	  <input type="checkbox" id="interest"  name="newsletters[]" value="Tour" data-validation="checkbox_group" data-validation-qty="min2">Tour
+	  
+	  <!--<input type="txtarea" id="exp">--></td>
+	  <td></td>
+	  
+      </tr>
+       <tr>
+	  <td>Pin Code</td>
+	  <td><input type="text" data-validation="number" data-validation-error-msg="Invalid Pin Code"></td>
+	  <td><span id="txtspanval5"></td>
+	  
+
+	  <td></td>
+	  <td>
+	      
+	  </td>
+	  <td></td>	  
+	  </tr>
+	  <tr>
+	  <td>Select Box</td>
+	  <td><select name="selectbox"  id="aa1"  size="5" multiple data-validation="length" data-validation-length="min2">
+		      <option value="a">Reading</option>
+		      <option value="b">Music</option>
+		      <option value="c">Movies</option>
+		      <option value="d">Play</option>
+		      <option value="e">Shopping</option>
+	      </select>
+	          
+	  </td>
+	  <td></td><td></td>
+	   <td> <span id="txtspanval4"> </span></br><span id="txtspanval6"></span></br><span id="txtspanval7"></span></td>
+	  </tr>
+      <tr>
+	  <td></td>
+	  <td></td>
+	  <td><input type="submit" value="Validate"></td>
+	  <td></td>
+      </tr>
+</table>
+</form>
+
+</div><!--container-->
+</div><!--form-->
+</div><!--align-->
+<script src="js/jquery-validate.js"></script>
+<script src="js/jquery-validator.js"></script>
+<script> $.validate(); </script>
+
+</body>
+</html>
+
+
