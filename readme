@@ -1,1 +1,9 @@
-readme
+you can download latest js files by searching "jquery-validate.js", I am using an old one, 
+Use data-validation in html tags as per given in index.html file.
+
+Jquery Library
+--------------
+<script src="js/jquery-validate.js"></script>
+<script src="js/jquery-validator.js"></script>
+
+use <script> $.validate(); </script> to validate the form fields.
